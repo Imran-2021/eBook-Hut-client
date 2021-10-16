@@ -1,0 +1,40 @@
+.nv-color{
+    color:white !important;
+    font-size: 20px;
+    color: inherit;
+    text-decoration: inherit;
+    padding: 10px;
+  
+  }
+  .nv{
+    background: #0d6efd !important;
+  }
+  .toggle{
+    background: rgb(229, 229, 238) !important;
+  }
+  .text-center::after{
+    display: block;
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background: #000;
+    transition:all .2s;
+    margin: auto;
+  }
+  .text-center:hover:after{
+    width: 100%;
+  }
+  .hr{
+    z-index: 100;
+    padding: 20px;
+    background: #000;
+  }
+  .icons::after{
+    display: block;
+    content: " ";
+    width: 100%;
+    height: 3px;
+    background: rgb(247, 222, 4);
+    transition:all .2s;
+    margin: auto;
+  }

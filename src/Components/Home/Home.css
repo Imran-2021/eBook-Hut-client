@@ -1,0 +1,8 @@
+.home{
+    height: 85vh;
+    width: 100%;
+    clip-path: polygon(100% 83%, 100% 0%, 0% 0%, 0% 83%, 50% 100%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
