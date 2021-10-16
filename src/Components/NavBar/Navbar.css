@@ -38,6 +38,23 @@
     transition:all .2s;
     margin: auto;
   }
-  .text-centerr{
+  .text-centerr,.text-centerrr{
     text-align: center;
   }
+  .cartsnm {
+    position: relative;
+    top: -15px;
+    left: -5px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    color: rgb(255, 0, 106) !important;
+}
+.ct{
+  color: rgb(255, 251, 0) !important;
+}
+.mc{
+  padding: 15px 10px;
+  background:#1c67d6 !important;
+  border-radius: 30px;
+}

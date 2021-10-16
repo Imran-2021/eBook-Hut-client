@@ -17,9 +17,9 @@ const Navbarr = () => {
             <Nav className="ms-auto ">
                 <Link onClick={() => setTimeout(() => {setExpanded(false)}, 150)} className="text-centerr nv-color" to="/home">Home</Link>
                 <Link onClick={() => setTimeout(() => {setExpanded(false)}, 150)} className="text-centerr nv-color" to="/books">Books</Link>
-                <Link onClick={() => setExpanded(false)} className="text-centerr nv-color" to="/carts">Carts</Link>
-                <Link onClick={() => setExpanded(false)} className="text-centerr nv-color" to="/about">About</Link>
                 <Link onClick={() => setExpanded(false)} className="text-centerr nv-color" to="/sign-in">Sign-In</Link>
+                <Link onClick={() => setExpanded(false)} className=" nv-color text-centerrr" to="/carts"><span className="mc"><span className="ct">Carts</span><span className="cartsnm">0000</span></span></Link>
+                <Link onClick={() => setExpanded(false)} className="text-centerr nv-color" to="/about">About</Link>
                 <Link onClick={() => setExpanded(false)} className="text-centerr nv-color" to="/admin">Admin</Link>
             </Nav>
             </Navbar.Collapse>
