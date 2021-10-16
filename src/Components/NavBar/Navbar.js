@@ -7,18 +7,20 @@ const Navbarr = () => {
     const [expanded, setExpanded] = useState(false);
     return (
         <>
-        <Navbar expanded={expanded} expand="lg" className="nv ">
+        {/* it's a sticky nv  */}
+        {/* <p class="text-center py-1 mb-0 bg-secondary">hello, books lover !! welcome.</p> */}
+        <Navbar expanded={expanded} expand="lg" className="nv" sticky="top">
         <Container>
-        <Link className="text-center nv-color icons " to="/">eBook-House</Link>
+        <Link className="text-centerr nv-color icons " to="/">eBook-House</Link>
             <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")} className="toggle" aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-                <Link onClick={() => setTimeout(() => {setExpanded(false)}, 150)} className="text-center nv-color" to="/home">Home</Link>
-                <Link onClick={() => setTimeout(() => {setExpanded(false)}, 150)} className="text-center nv-color" to="/books">Books</Link>
-                <Link onClick={() => setExpanded(false)} className="text-center nv-color" to="/carts">Carts</Link>
-                <Link onClick={() => setExpanded(false)} className="text-center nv-color" to="/about">About</Link>
-                <Link onClick={() => setExpanded(false)} className="text-center nv-color" to="/sign-in">Sign-In</Link>
-                <Link onClick={() => setExpanded(false)} className="text-center nv-color" to="/admin">Admin</Link>
+            <Nav className="ms-auto ">
+                <Link onClick={() => setTimeout(() => {setExpanded(false)}, 150)} className="text-centerr nv-color" to="/home">Home</Link>
+                <Link onClick={() => setTimeout(() => {setExpanded(false)}, 150)} className="text-centerr nv-color" to="/books">Books</Link>
+                <Link onClick={() => setExpanded(false)} className="text-centerr nv-color" to="/carts">Carts</Link>
+                <Link onClick={() => setExpanded(false)} className="text-centerr nv-color" to="/about">About</Link>
+                <Link onClick={() => setExpanded(false)} className="text-centerr nv-color" to="/sign-in">Sign-In</Link>
+                <Link onClick={() => setExpanded(false)} className="text-centerr nv-color" to="/admin">Admin</Link>
             </Nav>
             </Navbar.Collapse>
         </Container>

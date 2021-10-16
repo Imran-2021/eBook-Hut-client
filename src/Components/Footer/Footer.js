@@ -2,7 +2,7 @@ import React from 'react';
 import "./Footer"
 const Footer = () => {
     return (
-        <div>
+        <div style={{minHeight:"100vh"}}>
             <p>this is footer</p>
         </div>
     );
