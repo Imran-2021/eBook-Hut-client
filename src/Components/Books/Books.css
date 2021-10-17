@@ -1,0 +1,23 @@
+.details{
+    min-height: 85vh;
+    width: 100%;
+}
+.details-in{
+    min-height: 85vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 20px;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    font-size: 20px;
+    font-weight: 450;
+}
+.dd1{
+    margin: auto;
+    padding: 10px;
+    background: #ecf1f8c7;
+    border-radius: 2px;
+}
+.dd{
+    margin: auto;
+}

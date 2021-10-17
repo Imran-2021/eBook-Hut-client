@@ -1,9 +1,10 @@
 import React from 'react';
+import BookGallery from '../Product/BookGallery';
 import "./Books"
 const Books = () => {
     return (
         <div>
-            <p>this is books</p>
+            <BookGallery/>
         </div>
     );
 };

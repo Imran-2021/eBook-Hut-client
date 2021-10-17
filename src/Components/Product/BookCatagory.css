@@ -1,0 +1,47 @@
+.contain{
+    width: 100%;
+    background: #000;
+}
+.containe {        
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit,300px);
+    justify-content:center;
+    /* align-items:center; */
+    align-content: center;
+    min-height: 70vh;
+    
+}
+.containe .container-in{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:cyan;
+    border-radius: 3px;
+}
+/* .container-in:hover {
+    background-color: rgb(36, 204, 204);
+    border: 1px solid white;
+  }  */
+  p{
+      margin-bottom: 0px !important;
+  }
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    /* grid-gap: 70px; */
+    /* gap: 70px; */
+    padding-right: 20px;
+}
+.text-link {
+    color: inherit;
+    text-decoration: inherit;
+}
+.text-link:hover {
+    color: inherit;
+    text-decoration: inherit;
+}
+.bookCata{
+    display: flex;
+    justify-content: center;
+}
