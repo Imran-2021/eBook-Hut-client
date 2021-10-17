@@ -15,6 +15,7 @@ import Home from "./Components/Home/Home";
 import Navbarr from "./Components/NavBar/Navbar";
 import NoFound from "./Components/NoFound/NoFound";
 import SIgnIn from "./Components/SignIn/SIgnIn";
+import SIgnUp from "./Components/SignIn/SignUp";
 function App() {
   return (
     <>
@@ -38,6 +39,9 @@ function App() {
           </Route>
           <Route path="/sign-in">
             <SIgnIn />
+          </Route>
+          <Route path="/sign-up">
+            <SIgnUp />
           </Route>
           <Route path="/about">
             <About />
