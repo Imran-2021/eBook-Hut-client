@@ -6,7 +6,6 @@
     display: flex;
     justify-content: space-around;
     padding: 20px;
-
 }
 .inputs{
     outline: none;
@@ -25,7 +24,9 @@
     height: 60vh;
     overflow-y: scroll;
     background: rgb(238 229 229 / 8%);
-    box-shadow: 20px 80px 50px 15px rgb(255 130 130 / 12%);
+    /* box-shadow: 20px 80px 50px 15px rgb(255 130 130 / 12%); */
+    /* box-shadow: inset 5em 1em gold; */
+    box-shadow: inset 12em 5em 114px #f4f4f445;
     border-radius: 10px;
     box-sizing: border-box;
     padding: 10px;
@@ -37,9 +38,8 @@
     justify-content: space-around;
     padding-bottom: 2px;
     margin-bottom: 0px;
-    border-bottom: 1px solid red;
-    padding-top: 2px !important;
- 
+    /* border-bottom: 1px solid blue; */
+    padding: 4px !important;
 }
 .imgg{
     border-radius: 3%;
