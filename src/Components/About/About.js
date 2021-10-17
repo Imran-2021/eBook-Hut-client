@@ -1,9 +1,13 @@
 import React from 'react';
-import "./About"
+import "./About.css"
 const About = () => {
     return (
-        <div>
-            <p>this is about page</p>
+        <div className="about">
+            <div>
+            <h4 className="text-secondary">Hello brother !</h4>
+            <h4 className="text-secondary">Developer Sleeping now !</h4>
+            </div>
+
         </div>
     );
 };
