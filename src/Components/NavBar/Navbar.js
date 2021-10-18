@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Navbar.css"
@@ -16,7 +16,7 @@ const Navbarr = () => {
         {/* <p class="text-center py-1 mb-0 bg-secondary">hello, books lover !! welcome.</p> */}
         <Navbar expanded={expanded} expand="lg" className="nv" sticky="top">
         <Container>
-        <Link className="text-centerr nv-color icons " onClick={handleClick} to="/">eBook-Hot</Link>
+        <Link className="text-centerr nv-color icons " onClick={handleClick} to="/">eBook-Hut</Link>
             <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")} className="toggle" aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto ">
