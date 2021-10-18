@@ -16,7 +16,7 @@ const Navbarr = () => {
         {/* <p class="text-center py-1 mb-0 bg-secondary">hello, books lover !! welcome.</p> */}
         <Navbar expanded={expanded} expand="lg" className="nv" sticky="top">
         <Container>
-        <Link className="text-centerr nv-color icons " onClick={handleClick} to="/">eBook-House</Link>
+        <Link className="text-centerr nv-color icons " onClick={handleClick} to="/">eBook-Hot</Link>
             <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")} className="toggle" aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto ">
