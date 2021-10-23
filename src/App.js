@@ -10,6 +10,7 @@ import Admin from "./Components/Admin/Admin";
 import BookDetails from "./Components/Books/BookDetails";
 import Books from "./Components/Books/Books";
 import Carts from "./Components/Carts/Carts";
+import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
 import Navbarr from "./Components/NavBar/Navbar";
@@ -36,6 +37,9 @@ function App() {
           </Route>
           <Route path="/carts">
             <Carts />
+          </Route>
+          <Route path="/contact">
+            <Contact/>
           </Route>
           <Route path="/sign-in">
             <SIgnIn />

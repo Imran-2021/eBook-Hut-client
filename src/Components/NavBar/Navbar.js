@@ -27,6 +27,7 @@ const Navbarr = () => {
                 <Link onClick={handleClick} className="text-centerr nv-color" to="/sign-in">Sign-In</Link>
                 <Link onClick={handleClick} className=" nv-color text-centerrr" to="/carts"><span className="mc"><span className="ct">Carts</span><span className="cartsnm">1234</span></span></Link>
                 <Link onClick={handleClick} className="text-centerr nv-color" to="/about">About</Link>
+                <Link onClick={handleClick} className="text-centerr nv-color" to="/contact">Contact</Link>
                 <Link onClick={handleClick} className="text-centerr nv-color" to="/admin">Admin</Link>
             </Nav>
             </Navbar.Collapse>
