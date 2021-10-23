@@ -3,9 +3,9 @@ import { Form,Button } from 'react-bootstrap';
 import "./Admin.css"
 const AddBooks = () => {
     return (
-        <div className="w-50 m-auto d-flex justify-content-center vh">
+        <div className="w-100">
             
-            <Form className="w-50 m-auto">
+            <Form className="w-100 ">
             <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Book Name</Form.Label>
                     <Form.Control type="text" placeholder="Book name" required />

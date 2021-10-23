@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import "./Sign.css"
 const SIgnUp = () => {
     return (
-        <div className="w-50 m-auto d-flex justify-content-center vh">
+        <div className="w-50 m-auto d-flex justify-content-center vh ">
             
             <Form className="w-50 m-auto">
             <Form.Group className="mb-3" controlId="formBasicName">

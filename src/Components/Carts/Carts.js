@@ -11,7 +11,7 @@ const Carts = () => {
     const namee= "md imranul haque"
     return (
         <>
-        <div className="container">
+        <div className="container pb-5">
             <p className="pt-1 ctn"> <Link className="text-linkr" to="/books"><FaArrowLeft /> Continue Book shopping</Link> </p>
             <div>
                 <div>

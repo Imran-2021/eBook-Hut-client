@@ -1,24 +1,28 @@
 import React, { useState } from 'react';
+import ManageBook from '../ManageBook/ManageBook';
 import NoFound from '../NoFound/NoFound';
-import SIgnIn from '../SignIn/SIgnIn';
+import OrderedBook from '../OrderedBook/OrderedBook';
 import AddBooks from './AddBooks';
 import "./Admin.css"
 const Admin = () => {
-    const [ad,setAb]=useState(1)
-    
+    const [ad, setAb] = useState(1)
+
     return (
-        <div class="container">
-            <div className="p-4 bg-success w-25">
-            <p onClick={()=>setAb(1)}>Add Books</p>
-            <p onClick={()=>setAb(2)}>Sign In</p>
-            <p onClick={()=>setAb(3)}>Not Found!</p>
-            </div>
-                <div>
-                    {
-                        ad===1?<AddBooks/>: ad===2?<SIgnIn/>:<NoFound/>
-                    }
+        <div class="admin">
+            <div className="admin-in">
+                <div className="p-4 bg-success admin-inn">
+                    <p className="admin-nv" onClick={() => setAb(1)}>Add Books</p>
+                    <p className="admin-nv" onClick={() => setAb(2)}>ManageBook</p>
+                    <p className="admin-nv" onClick={() => setAb(3)}>OrderedBook</p>
                 </div>
-            
+                <div className="admin-innn">
+                    <div>
+                    {
+                        ad === 1 ? <AddBooks /> : ad === 2 ? <ManageBook /> : <OrderedBook />
+                    }</div>
+                </div>
+            </div>
+
         </div>
     );
 };

@@ -60,6 +60,7 @@ function App() {
             <NoFound/>
           </Route>
         </Switch>
+        <Footer/>
     </Router>
     </>
   );
