@@ -94,7 +94,7 @@ const SIgnIn = () => {
                     <Form.Control  onBlur={handleChange} type="password" name="password"  placeholder="Password" required/>
                 </Form.Group>
                 <input className="btn btn-primary mt-3 w-100" type="submit" value="Sign In" />
-                <div class="w-100 text-center mt-3"><a onClick={()=>alert("developer is too busy to make this work")} href="/sign-in">Forgot Password?</a></div>
+                <div class="w-100 text-center mt-3"><a onClick={()=>alert("forget password is not working right now")} href="/sign-in">Forgot Password?</a></div>
 
                 <div className="mt-3">
                 or <Link to="/sign-up">Sign Up</Link>
