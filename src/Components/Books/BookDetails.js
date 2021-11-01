@@ -1,37 +1,64 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import FakeData from "../../FakeData"
+import { userContext } from '../../App';
 import "./Books.css"
 const BookDetails = () => {
+const [loggedInUser,setLoggedInUser]=useContext(userContext)
+console.log("loggedInUser",loggedInUser);
     const { idd } = useParams()
-    // console.log(id);
-    const [book, setBooks] = useState(
-        FakeData.filter(x => x.id === idd)
-    )
-    console.log(book[0].name);
-    const {name,catagory,price,id,image}=book[0]
-
-    const [cart, setCart] = useState(0)
+    const [book, setBook] = useState([])
+    useEffect(() => {
+        fetch("http://localhost:3001/books")
+            .then(res => res.json())
+            .then(data => {
+                setBook(
+                    data.filter(x => x._id == idd)
+                )
+            })
+    }, [])
+    console.log("bookk", book[0]);
+    
+    function cartItem(e,id){
+        loggedInUser.x++;
+        e.target.innerHTML="Added"
+        console.log(e.target.innerHTML);
+        const book=document.getElementById("bookNm").innerText;
+        const price=document.getElementById("bookp").innerText;
+        const img=document.getElementById("img").innerText;
+        const emaill= loggedInUser.email;
+        const name= loggedInUser.displayName;
+        const dataa = {idd,emaill,name,price,book,img}
+        console.log(dataa,"dataa");
+         // post data to the server - 
+         fetch("http://localhost:3001/addToCard", {
+            method: 'POST',
+            body: JSON.stringify({ dataa }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+            .then(response => response.json())
+            .then(data => console.log(data))
+    }
     return (
         <div className="details">
-            <p className="text-center p-2 bg-secondary text-dark">here the details of Book- <span style={{color:"white"}}>{name}</span></p>
+            <p className="text-center p-2 bg-secondary text-dark">here the details of Book- <span style={{ color: "white" }}>{book[0]?.name}</span></p>
 
             <div className="details-in container">
-               <div className="dd1 mt-5">
-               <img src={image} width="450px" height="350px" alt="book-images" />
-               <h5>{name}</h5>
-               <p>Id : {id}</p>
-                <h5>Book - {name}</h5>
-                <h5>Catagory - {catagory}</h5>
-                <h5>Price - ${price}</h5>
+                <div className="dd1 mt-5">
+                    <img src={book[0]?.url} width="450px" height="350px" alt="book-images" />
+                    <h5 >Book - <span id="bookNm">{book[0]?.name}</span> </h5>
+                    <h5>Catagory - {book[0]?.catagory}</h5>
+                    <h5>Price - $ <span id="bookp">{book[0]?.price}</span></h5>
                 </div>
                 <div className="dd mt-5">
-                <h5>Book - {name}</h5>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolores optio ut inventore quasi quae natus perferendis aliquam architecto explicabo? Quisquam natus vero repudiandae dolorem ullam voluptates maiores asperiores at?</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum totam amet nam ipsam, quaerat nihil aut ducimus dolores minus accusamus saepe esse necessitatibus, voluptas eveniet consequatur vero libero perspiciatis distinctio!</p>
-                    <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda natus fuga consequatur dicta cum quasi, nam accusantium aut aperiam pariatur ipsa optio modi, commodi sequi placeat unde sit corrupti quod.</h5>
-                    <button onClick={() => setCart(cart + 1)} className="btn btn-primary mb-2 w-100">Add to Cart</button>
-               </div>
+                    <p style={{display: 'none'}}><span id="img">{book[0]?.url}</span></p>
+                    <h5>Book - {book[0]?.name}</h5>
+                    <h5>{book[0]?.description1}</h5>
+                    <h5>{book[0]?.description2}</h5>
+                    <h5>{book[0]?.description3}</h5>
+                    <button onClick={(e) => cartItem(e,book[0]?._id)} className="btn btn-primary mb-2 w-100">Add to Cart</button>
+                </div>
             </div>
         </div>
     );

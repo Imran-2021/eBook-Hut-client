@@ -13,7 +13,7 @@ const Admin = () => {
                 <div className="p-4 bg-success admin-inn">
                     <p className="admin-nv" onClick={() => setAb(1)}>Add Books</p>
                     <p className="admin-nv" onClick={() => setAb(2)}>ManageBook</p>
-                    <p className="admin-nv" onClick={() => setAb(3)}>OrderedBook</p>
+                    <p className="admin-nv" onClick={() => setAb(3)}>All OrderedBook</p>
                 </div>
                 <div className="admin-innn">
                     <div>

@@ -56,9 +56,9 @@ function App() {
           <Route path="/admin">
             <Admin/>
           </Route>
-          <PrivateRoute path="/details/:idd">
+          <Route path="/details/:idd">
             <BookDetails/>
-          </PrivateRoute>
+          </Route>
           <Route path="*">
             <NoFound/>
           </Route>

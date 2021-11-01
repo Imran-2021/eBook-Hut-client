@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import "./Carts.css"
 import { FaPlus, FaMinus, FaTrashAlt } from "react-icons/fa";
 import CartItems from './CartItems';
 import { Modal,Button } from 'react-bootstrap';
+import { userContext } from '../../App';
 
 const Carts = () => {
+  const [loggedInUser,setLoggedInUser]=useContext(userContext)
+  const [book, setBook] = useState([])
+  useEffect(() => {
+      fetch("http://localhost:3001/singlecardBooks?email="+loggedInUser.email)
+          .then((response) => response.json())
+          .then(data => {
+              setBook(data)
+          })
+  }, [])
+  console.log(book);
     const [modalShow, setModalShow] = React.useState(false);
     const namee= "md imranul haque"
+    
     return (
         <>
         <div className="container pb-5">
@@ -16,7 +28,7 @@ const Carts = () => {
             <div>
                 <div>
                     <h3 style={{ marginbottom: "0px" }}>cart</h3>
-                    <p className="pb-1">You have <span className="text-primary h5">7</span> items in cart </p>
+                    <p className="pb-1">You have <span className="text-primary h5">{book.length}</span> items in cart </p>
                 </div>
                 <div className="contan">
                     <CartItems />

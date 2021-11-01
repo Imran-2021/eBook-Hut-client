@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Navbar.css"
 import { Link } from 'react-router-dom';
+import { userContext } from '../../App';
 const Navbarr = () => {
     const [expanded, setExpanded] = useState(false);
     const handleClick = ()=>{
@@ -10,6 +11,7 @@ const Navbarr = () => {
         setExpanded(false)
         
     }
+  const [loggedInUser,setLoggedInUser]=useContext(userContext)
     return (
         <>
         {/* it's a sticky nv  */}
@@ -25,7 +27,7 @@ const Navbarr = () => {
                 <Link onClick={handleClick} className="text-centerr nv-color" to="/books">Books</Link>
                 {/* onClick={() => setExpanded(false)} */}
                 <Link onClick={handleClick} className="text-centerr nv-color" to="/sign-in">Sign-In</Link>
-                <Link onClick={handleClick} className=" nv-color text-centerrr" to="/carts"><span className="mc"><span className="ct">Carts</span><span className="cartsnm">1234</span></span></Link>
+                <Link onClick={handleClick} className=" nv-color text-centerrr" to="/carts"><span className="mc"><span className="ct">Carts</span><span className="cartsnm">{loggedInUser.x || "?"}</span></span></Link>
                 <Link onClick={handleClick} className="text-centerr nv-color" to="/about">About</Link>
                 <Link onClick={handleClick} className="text-centerr nv-color" to="/contact">Contact</Link>
                 <Link onClick={handleClick} className="text-centerr nv-color" to="/admin">Admin</Link>
